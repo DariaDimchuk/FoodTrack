@@ -293,6 +293,7 @@
             this.Controls.Add(this.totalCaloriesProgressBar);
             this.Controls.Add(this.caloriesProgressBar);
             this.Controls.Add(this.dateTimePicker);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
             this.Text = "Food Tracker";
             this.ResumeLayout(false);
