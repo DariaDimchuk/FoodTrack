@@ -49,7 +49,7 @@ namespace FoodTrack
             if (!testItem.SetName(this.nameTextBox.Text))
             {
                 validationPassed = false;
-                NameErrorLabel.Text = "Name cannot be empty or have numbers.";
+                NameErrorLabel.Text = "Name cannot be empty or have numbers";
             }
 
             if (Int32.TryParse(caloriesTextBox.Text, out int cal))
@@ -57,13 +57,17 @@ namespace FoodTrack
                 if (!testItem.SetCalories(cal))
                 {
                     validationPassed = false;
-                    CaloriesErrorLabel.Text = "Calories must be 0 or above.";
+                    CaloriesErrorLabel.Text = "Calories must be 0 or above";
                 }
             }
             else
             {
                 validationPassed = false;
-                CaloriesErrorLabel.Text = "Calories cannot be text.";
+                if(caloriesTextBox.Text.Length == 0)
+                {
+                    CaloriesErrorLabel.Text = "Calories cannot be empty";
+
+                }else CaloriesErrorLabel.Text = "Calories cannot be text";
             }
 
 
@@ -77,8 +81,15 @@ namespace FoodTrack
             }
             else
             {
-                validationPassed = false;
-                CarbsErrorLabel.Text = "Carbs cannot be text.";
+                if (carbsTextBox.Text.Length == 0)
+                {
+                    testItem.SetCarbs(0);
+                }
+                else
+                {
+                    validationPassed = false;
+                    CarbsErrorLabel.Text = "Carbs cannot be text";
+                }
             }
 
 
@@ -92,8 +103,16 @@ namespace FoodTrack
             }
             else
             {
-                validationPassed = false;
-                FatErrorLabel.Text = "Fat cannot be text.";
+                
+                if (fatTextBox.Text.Length == 0)
+                {
+                    testItem.SetFat(0);
+                }
+                else
+                {
+                    validationPassed = false;
+                    FatErrorLabel.Text = "Fat cannot be text";
+                }
             }
 
 
@@ -107,8 +126,15 @@ namespace FoodTrack
             }
             else
             {
-                validationPassed = false;
-                ProteinErrorLabel.Text = "Protein cannot be text.";
+                if (proteinTextBox.Text.Length == 0)
+                {
+                    testItem.SetProtein(0);
+                }
+                else
+                {
+                    validationPassed = false;
+                    ProteinErrorLabel.Text = "Protein cannot be text";
+                }
             }
 
             //add item if valid

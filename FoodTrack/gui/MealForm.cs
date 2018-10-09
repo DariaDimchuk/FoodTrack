@@ -159,20 +159,6 @@ namespace FoodTrack.gui
         /// <param name="food"></param>
         private void SetEditTextboxesToFoodItemValues(FoodItem food)
         {
-            if (mealType == Meal.BREAKFAST)
-            {
-                FormsFunctionLabel.Text += " Breakfast";
-            }
-
-            if (mealType == Meal.LUNCH)
-            {
-                FormsFunctionLabel.Text += " Lunch";
-            }
-
-            if (mealType == Meal.DINNER)
-            {
-                FormsFunctionLabel.Text += " Dinner";
-            }
 
             if (food != null)
             {
@@ -284,7 +270,20 @@ namespace FoodTrack.gui
 
         private void MealForm_Load(object sender, EventArgs e)
         {
+            if (mealType == Meal.BREAKFAST)
+            {
+                FormsFunctionLabel.Text += " Breakfast";
+            }
 
+            if (mealType == Meal.LUNCH)
+            {
+                FormsFunctionLabel.Text += " Lunch";
+            }
+
+            if (mealType == Meal.DINNER)
+            {
+                FormsFunctionLabel.Text += " Dinner";
+            }
         }
     }//end class
 }

@@ -46,25 +46,25 @@ namespace FoodTrack.gui
 
             if (!(Int32.TryParse(this.caloriesTxt.Text, out int cal) && cal >= GoalSettings.MINIMUM_CALORIES))
             {
-                CaloriesErrorLabel.Text = "Calories must be a number of 1000 or higher.";
+                CaloriesErrorLabel.Text = "Calories must be 1000 or higher.";
                 errorsFound = true;
             }
 
             if (!(Int32.TryParse(this.carbsTxt.Text, out int carb) && carb >= GoalSettings.MINIMUM_NUTRIENT_VALUE))
             {
-                CarbsErrorLabel.Text = "Carbs must be a number of 0 or higher.";
+                CarbsErrorLabel.Text = "Carbs must be 0 or higher.";
                 errorsFound = true;
             }
 
             if (!(Int32.TryParse(this.fatTxt.Text, out int fat) && fat >= GoalSettings.MINIMUM_NUTRIENT_VALUE))
             {
-                FatErrorLabel.Text = "Fat must be a number of 0 or higher.";
+                FatErrorLabel.Text = "Fat must be 0 or higher.";
                 errorsFound = true;
             }
 
             if (!(Int32.TryParse(this.proteinTxt.Text, out int protein) && protein >= GoalSettings.MINIMUM_NUTRIENT_VALUE))
             {
-                ProteinErrorLabel.Text = "Protein must be a number of 0 or higher.";
+                ProteinErrorLabel.Text = "Protein must be 0 or higher.";
                 errorsFound = true;
             }
 
