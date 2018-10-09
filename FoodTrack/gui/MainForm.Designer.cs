@@ -210,7 +210,7 @@
             // 
             // fatProgressBar
             // 
-            this.fatProgressBar.Location = new System.Drawing.Point(280, 237);
+            this.fatProgressBar.Location = new System.Drawing.Point(280, 243);
             this.fatProgressBar.Maximum = 5000;
             this.fatProgressBar.Name = "fatProgressBar";
             this.fatProgressBar.Size = new System.Drawing.Size(219, 45);
@@ -218,7 +218,7 @@
             // 
             // carbsProgressBar
             // 
-            this.carbsProgressBar.Location = new System.Drawing.Point(12, 237);
+            this.carbsProgressBar.Location = new System.Drawing.Point(12, 243);
             this.carbsProgressBar.Maximum = 5000;
             this.carbsProgressBar.Name = "carbsProgressBar";
             this.carbsProgressBar.Size = new System.Drawing.Size(219, 45);
@@ -226,7 +226,7 @@
             // 
             // proteinProgressBar
             // 
-            this.proteinProgressBar.Location = new System.Drawing.Point(536, 237);
+            this.proteinProgressBar.Location = new System.Drawing.Point(536, 243);
             this.proteinProgressBar.Maximum = 5000;
             this.proteinProgressBar.Name = "proteinProgressBar";
             this.proteinProgressBar.Size = new System.Drawing.Size(219, 45);
@@ -259,7 +259,7 @@
             this.proteinProgressBarValueLabel.AutoSize = true;
             this.proteinProgressBarValueLabel.BackColor = System.Drawing.Color.Transparent;
             this.proteinProgressBarValueLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.proteinProgressBarValueLabel.Location = new System.Drawing.Point(592, 247);
+            this.proteinProgressBarValueLabel.Location = new System.Drawing.Point(601, 253);
             this.proteinProgressBarValueLabel.Name = "proteinProgressBarValueLabel";
             this.proteinProgressBarValueLabel.Size = new System.Drawing.Size(106, 25);
             this.proteinProgressBarValueLabel.TabIndex = 28;
@@ -270,7 +270,7 @@
             this.fatProgressBarValueLabel.AutoSize = true;
             this.fatProgressBarValueLabel.BackColor = System.Drawing.Color.Transparent;
             this.fatProgressBarValueLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fatProgressBarValueLabel.Location = new System.Drawing.Point(344, 247);
+            this.fatProgressBarValueLabel.Location = new System.Drawing.Point(344, 253);
             this.fatProgressBarValueLabel.Name = "fatProgressBarValueLabel";
             this.fatProgressBarValueLabel.Size = new System.Drawing.Size(106, 25);
             this.fatProgressBarValueLabel.TabIndex = 29;
@@ -281,7 +281,7 @@
             this.carbProgressBarValueLabel.AutoSize = true;
             this.carbProgressBarValueLabel.BackColor = System.Drawing.Color.Transparent;
             this.carbProgressBarValueLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.carbProgressBarValueLabel.Location = new System.Drawing.Point(62, 247);
+            this.carbProgressBarValueLabel.Location = new System.Drawing.Point(80, 253);
             this.carbProgressBarValueLabel.Name = "carbProgressBarValueLabel";
             this.carbProgressBarValueLabel.Size = new System.Drawing.Size(106, 25);
             this.carbProgressBarValueLabel.TabIndex = 30;

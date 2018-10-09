@@ -128,6 +128,7 @@ namespace FoodTrack.gui
             this.Refresh();
         }//end method
         
+        
 
         /// <summary>
         /// When a different food item is selected in the food list, the edit section will display
@@ -158,7 +159,22 @@ namespace FoodTrack.gui
         /// <param name="food"></param>
         private void SetEditTextboxesToFoodItemValues(FoodItem food)
         {
-            if(food != null)
+            if (mealType == Meal.BREAKFAST)
+            {
+                FormsFunctionLabel.Text += " Breakfast";
+            }
+
+            if (mealType == Meal.LUNCH)
+            {
+                FormsFunctionLabel.Text += " Lunch";
+            }
+
+            if (mealType == Meal.DINNER)
+            {
+                FormsFunctionLabel.Text += " Dinner";
+            }
+
+            if (food != null)
             {
                 nameTxt.Text = food.GetName();
                 caloriesTxt.Text = food.GetCalories().ToString();
@@ -266,5 +282,9 @@ namespace FoodTrack.gui
             generalErrorLabel.Text = "";
         }//end method
 
+        private void MealForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }//end class
 }

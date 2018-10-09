@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MealForm));
             this.foodsListBox = new System.Windows.Forms.ListBox();
             this.AddFoodBtn = new System.Windows.Forms.Button();
             this.nameLabel = new System.Windows.Forms.Label();
@@ -50,26 +51,30 @@
             this.proteinTxt = new System.Windows.Forms.TextBox();
             this.generalErrorLabel = new System.Windows.Forms.Label();
             this.dailyTrackerBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.FormsFunctionLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dailyTrackerBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // foodsListBox
             // 
+            this.foodsListBox.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.foodsListBox.FormattingEnabled = true;
-            this.foodsListBox.ItemHeight = 20;
+            this.foodsListBox.ItemHeight = 25;
             this.foodsListBox.Items.AddRange(new object[] {
             "hallo"});
-            this.foodsListBox.Location = new System.Drawing.Point(12, 32);
+            this.foodsListBox.Location = new System.Drawing.Point(17, 71);
             this.foodsListBox.Name = "foodsListBox";
-            this.foodsListBox.Size = new System.Drawing.Size(264, 264);
+            this.foodsListBox.Size = new System.Drawing.Size(246, 379);
             this.foodsListBox.TabIndex = 0;
             this.foodsListBox.SelectedIndexChanged += new System.EventHandler(this.FoodsListBox_SelectedIndexChanged);
             // 
             // AddFoodBtn
             // 
-            this.AddFoodBtn.Location = new System.Drawing.Point(13, 317);
+            this.AddFoodBtn.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddFoodBtn.Location = new System.Drawing.Point(17, 454);
             this.AddFoodBtn.Name = "AddFoodBtn";
-            this.AddFoodBtn.Size = new System.Drawing.Size(144, 33);
+            this.AddFoodBtn.Size = new System.Drawing.Size(246, 51);
             this.AddFoodBtn.TabIndex = 1;
             this.AddFoodBtn.Text = "Add New Food";
             this.AddFoodBtn.UseVisualStyleBackColor = true;
@@ -78,53 +83,59 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(293, 41);
+            this.nameLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Location = new System.Drawing.Point(297, 117);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(51, 20);
+            this.nameLabel.Size = new System.Drawing.Size(71, 23);
             this.nameLabel.TabIndex = 7;
             this.nameLabel.Text = "Name";
             // 
             // caloriesLabel
             // 
             this.caloriesLabel.AutoSize = true;
-            this.caloriesLabel.Location = new System.Drawing.Point(293, 93);
+            this.caloriesLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.caloriesLabel.Location = new System.Drawing.Point(292, 187);
             this.caloriesLabel.Name = "caloriesLabel";
-            this.caloriesLabel.Size = new System.Drawing.Size(66, 20);
+            this.caloriesLabel.Size = new System.Drawing.Size(88, 23);
             this.caloriesLabel.TabIndex = 8;
             this.caloriesLabel.Text = "Calories";
             // 
             // carbsLabel
             // 
             this.carbsLabel.AutoSize = true;
-            this.carbsLabel.Location = new System.Drawing.Point(293, 145);
+            this.carbsLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carbsLabel.Location = new System.Drawing.Point(292, 258);
             this.carbsLabel.Name = "carbsLabel";
-            this.carbsLabel.Size = new System.Drawing.Size(51, 20);
+            this.carbsLabel.Size = new System.Drawing.Size(68, 23);
             this.carbsLabel.TabIndex = 9;
             this.carbsLabel.Text = "Carbs";
             // 
             // fatLabel
             // 
             this.fatLabel.AutoSize = true;
-            this.fatLabel.Location = new System.Drawing.Point(293, 200);
+            this.fatLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fatLabel.Location = new System.Drawing.Point(292, 325);
             this.fatLabel.Name = "fatLabel";
-            this.fatLabel.Size = new System.Drawing.Size(33, 20);
+            this.fatLabel.Size = new System.Drawing.Size(41, 23);
             this.fatLabel.TabIndex = 10;
             this.fatLabel.Text = "Fat";
             // 
             // proteinLabel
             // 
             this.proteinLabel.AutoSize = true;
-            this.proteinLabel.Location = new System.Drawing.Point(293, 252);
+            this.proteinLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proteinLabel.Location = new System.Drawing.Point(292, 397);
             this.proteinLabel.Name = "proteinLabel";
-            this.proteinLabel.Size = new System.Drawing.Size(59, 20);
+            this.proteinLabel.Size = new System.Drawing.Size(76, 23);
             this.proteinLabel.TabIndex = 11;
             this.proteinLabel.Text = "Protein";
             // 
             // saveEditsBtn
             // 
-            this.saveEditsBtn.Location = new System.Drawing.Point(394, 301);
+            this.saveEditsBtn.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.saveEditsBtn.Location = new System.Drawing.Point(385, 465);
             this.saveEditsBtn.Name = "saveEditsBtn";
-            this.saveEditsBtn.Size = new System.Drawing.Size(81, 33);
+            this.saveEditsBtn.Size = new System.Drawing.Size(118, 40);
             this.saveEditsBtn.TabIndex = 7;
             this.saveEditsBtn.Text = "Save";
             this.saveEditsBtn.UseVisualStyleBackColor = true;
@@ -132,9 +143,10 @@
             // 
             // deleteFoodBtn
             // 
-            this.deleteFoodBtn.Location = new System.Drawing.Point(481, 301);
+            this.deleteFoodBtn.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteFoodBtn.Location = new System.Drawing.Point(509, 465);
             this.deleteFoodBtn.Name = "deleteFoodBtn";
-            this.deleteFoodBtn.Size = new System.Drawing.Size(81, 33);
+            this.deleteFoodBtn.Size = new System.Drawing.Size(118, 40);
             this.deleteFoodBtn.TabIndex = 8;
             this.deleteFoodBtn.Text = "Delete";
             this.deleteFoodBtn.UseVisualStyleBackColor = true;
@@ -144,10 +156,11 @@
             // 
             this.nameErrorLabel.AutoSize = true;
             this.nameErrorLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.nameErrorLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.nameErrorLabel.Location = new System.Drawing.Point(293, 67);
+            this.nameErrorLabel.Location = new System.Drawing.Point(297, 149);
             this.nameErrorLabel.Name = "nameErrorLabel";
-            this.nameErrorLabel.Size = new System.Drawing.Size(86, 20);
+            this.nameErrorLabel.Size = new System.Drawing.Size(111, 23);
             this.nameErrorLabel.TabIndex = 14;
             this.nameErrorLabel.Text = "*Error here";
             // 
@@ -155,10 +168,11 @@
             // 
             this.CaloriesErrorLabel.AutoSize = true;
             this.CaloriesErrorLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.CaloriesErrorLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CaloriesErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.CaloriesErrorLabel.Location = new System.Drawing.Point(293, 119);
+            this.CaloriesErrorLabel.Location = new System.Drawing.Point(292, 219);
             this.CaloriesErrorLabel.Name = "CaloriesErrorLabel";
-            this.CaloriesErrorLabel.Size = new System.Drawing.Size(86, 20);
+            this.CaloriesErrorLabel.Size = new System.Drawing.Size(111, 23);
             this.CaloriesErrorLabel.TabIndex = 15;
             this.CaloriesErrorLabel.Text = "*Error here";
             // 
@@ -166,10 +180,11 @@
             // 
             this.CarbsErrorLabel.AutoSize = true;
             this.CarbsErrorLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.CarbsErrorLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CarbsErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.CarbsErrorLabel.Location = new System.Drawing.Point(293, 174);
+            this.CarbsErrorLabel.Location = new System.Drawing.Point(292, 290);
             this.CarbsErrorLabel.Name = "CarbsErrorLabel";
-            this.CarbsErrorLabel.Size = new System.Drawing.Size(86, 20);
+            this.CarbsErrorLabel.Size = new System.Drawing.Size(111, 23);
             this.CarbsErrorLabel.TabIndex = 16;
             this.CarbsErrorLabel.Text = "*Error here";
             // 
@@ -177,10 +192,11 @@
             // 
             this.FatErrorLabel.AutoSize = true;
             this.FatErrorLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.FatErrorLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FatErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.FatErrorLabel.Location = new System.Drawing.Point(293, 226);
+            this.FatErrorLabel.Location = new System.Drawing.Point(292, 357);
             this.FatErrorLabel.Name = "FatErrorLabel";
-            this.FatErrorLabel.Size = new System.Drawing.Size(86, 20);
+            this.FatErrorLabel.Size = new System.Drawing.Size(111, 23);
             this.FatErrorLabel.TabIndex = 17;
             this.FatErrorLabel.Text = "*Error here";
             // 
@@ -188,55 +204,62 @@
             // 
             this.ProteinErrorLabel.AutoSize = true;
             this.ProteinErrorLabel.BackColor = System.Drawing.SystemColors.Control;
+            this.ProteinErrorLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProteinErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.ProteinErrorLabel.Location = new System.Drawing.Point(293, 278);
+            this.ProteinErrorLabel.Location = new System.Drawing.Point(292, 429);
             this.ProteinErrorLabel.Name = "ProteinErrorLabel";
-            this.ProteinErrorLabel.Size = new System.Drawing.Size(86, 20);
+            this.ProteinErrorLabel.Size = new System.Drawing.Size(111, 23);
             this.ProteinErrorLabel.TabIndex = 18;
             this.ProteinErrorLabel.Text = "*Error here";
             // 
             // nameTxt
             // 
-            this.nameTxt.Location = new System.Drawing.Point(365, 38);
+            this.nameTxt.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTxt.Location = new System.Drawing.Point(399, 114);
             this.nameTxt.Name = "nameTxt";
-            this.nameTxt.Size = new System.Drawing.Size(197, 26);
+            this.nameTxt.Size = new System.Drawing.Size(228, 32);
             this.nameTxt.TabIndex = 2;
             // 
             // caloriesTxt
             // 
-            this.caloriesTxt.Location = new System.Drawing.Point(365, 90);
+            this.caloriesTxt.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.caloriesTxt.Location = new System.Drawing.Point(399, 184);
             this.caloriesTxt.Name = "caloriesTxt";
-            this.caloriesTxt.Size = new System.Drawing.Size(197, 26);
+            this.caloriesTxt.Size = new System.Drawing.Size(228, 32);
             this.caloriesTxt.TabIndex = 3;
             // 
             // carbsTxt
             // 
-            this.carbsTxt.Location = new System.Drawing.Point(365, 145);
+            this.carbsTxt.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carbsTxt.Location = new System.Drawing.Point(399, 255);
             this.carbsTxt.Name = "carbsTxt";
-            this.carbsTxt.Size = new System.Drawing.Size(197, 26);
+            this.carbsTxt.Size = new System.Drawing.Size(228, 32);
             this.carbsTxt.TabIndex = 4;
             // 
             // fatTxt
             // 
-            this.fatTxt.Location = new System.Drawing.Point(365, 197);
+            this.fatTxt.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fatTxt.Location = new System.Drawing.Point(399, 322);
             this.fatTxt.Name = "fatTxt";
-            this.fatTxt.Size = new System.Drawing.Size(197, 26);
+            this.fatTxt.Size = new System.Drawing.Size(228, 32);
             this.fatTxt.TabIndex = 5;
             // 
             // proteinTxt
             // 
-            this.proteinTxt.Location = new System.Drawing.Point(365, 249);
+            this.proteinTxt.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proteinTxt.Location = new System.Drawing.Point(399, 394);
             this.proteinTxt.Name = "proteinTxt";
-            this.proteinTxt.Size = new System.Drawing.Size(197, 26);
+            this.proteinTxt.Size = new System.Drawing.Size(228, 32);
             this.proteinTxt.TabIndex = 6;
             // 
             // generalErrorLabel
             // 
             this.generalErrorLabel.AutoSize = true;
+            this.generalErrorLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.generalErrorLabel.ForeColor = System.Drawing.Color.Red;
-            this.generalErrorLabel.Location = new System.Drawing.Point(390, 339);
+            this.generalErrorLabel.Location = new System.Drawing.Point(292, 508);
             this.generalErrorLabel.Name = "generalErrorLabel";
-            this.generalErrorLabel.Size = new System.Drawing.Size(86, 20);
+            this.generalErrorLabel.Size = new System.Drawing.Size(111, 23);
             this.generalErrorLabel.TabIndex = 24;
             this.generalErrorLabel.Text = "*Error here";
             // 
@@ -244,11 +267,33 @@
             // 
             this.dailyTrackerBindingSource1.DataSource = typeof(FoodTrack.data.DailyTracker);
             // 
+            // FormsFunctionLabel
+            // 
+            this.FormsFunctionLabel.AutoSize = true;
+            this.FormsFunctionLabel.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormsFunctionLabel.Location = new System.Drawing.Point(12, 24);
+            this.FormsFunctionLabel.Name = "FormsFunctionLabel";
+            this.FormsFunctionLabel.Size = new System.Drawing.Size(213, 28);
+            this.FormsFunctionLabel.TabIndex = 25;
+            this.FormsFunctionLabel.Text = "Add new food to ";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(395, 71);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(180, 23);
+            this.label1.TabIndex = 26;
+            this.label1.Text = "Food Item Details";
+            // 
             // MealForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(574, 368);
+            this.ClientSize = new System.Drawing.Size(648, 547);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.FormsFunctionLabel);
             this.Controls.Add(this.generalErrorLabel);
             this.Controls.Add(this.proteinTxt);
             this.Controls.Add(this.fatTxt);
@@ -270,8 +315,10 @@
             this.Controls.Add(this.AddFoodBtn);
             this.Controls.Add(this.foodsListBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MealForm";
             this.Text = "MealForm";
+            this.Load += new System.EventHandler(this.MealForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dailyTrackerBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -301,5 +348,7 @@
         private System.Windows.Forms.TextBox fatTxt;
         private System.Windows.Forms.TextBox proteinTxt;
         private System.Windows.Forms.Label generalErrorLabel;
+        private System.Windows.Forms.Label FormsFunctionLabel;
+        private System.Windows.Forms.Label label1;
     }
 }
