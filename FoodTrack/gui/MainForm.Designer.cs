@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.caloriesProgressBar = new System.Windows.Forms.ProgressBar();
             this.totalCaloriesProgressBar = new System.Windows.Forms.Label();
@@ -51,94 +52,105 @@
             this.proteinProgressBarValueLabel = new System.Windows.Forms.Label();
             this.fatProgressBarValueLabel = new System.Windows.Forms.Label();
             this.carbProgressBarValueLabel = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // dateTimePicker
             // 
-            this.dateTimePicker.Location = new System.Drawing.Point(12, 12);
+            this.dateTimePicker.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker.Location = new System.Drawing.Point(12, 26);
             this.dateTimePicker.Name = "dateTimePicker";
-            this.dateTimePicker.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker.Size = new System.Drawing.Size(246, 34);
             this.dateTimePicker.TabIndex = 0;
             this.dateTimePicker.ValueChanged += new System.EventHandler(this.DateTimePicker_ValueChanged);
             // 
             // caloriesProgressBar
             // 
             this.caloriesProgressBar.BackColor = System.Drawing.SystemColors.Control;
-            this.caloriesProgressBar.Location = new System.Drawing.Point(12, 89);
+            this.caloriesProgressBar.Location = new System.Drawing.Point(12, 135);
             this.caloriesProgressBar.MarqueeAnimationSpeed = 0;
             this.caloriesProgressBar.Maximum = 10000;
             this.caloriesProgressBar.Name = "caloriesProgressBar";
-            this.caloriesProgressBar.Size = new System.Drawing.Size(521, 38);
+            this.caloriesProgressBar.Size = new System.Drawing.Size(743, 53);
             this.caloriesProgressBar.TabIndex = 1;
             // 
             // totalCaloriesProgressBar
             // 
             this.totalCaloriesProgressBar.AutoSize = true;
-            this.totalCaloriesProgressBar.Location = new System.Drawing.Point(193, 66);
+            this.totalCaloriesProgressBar.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.totalCaloriesProgressBar.Location = new System.Drawing.Point(272, 90);
             this.totalCaloriesProgressBar.Name = "totalCaloriesProgressBar";
-            this.totalCaloriesProgressBar.Size = new System.Drawing.Size(152, 20);
+            this.totalCaloriesProgressBar.Size = new System.Drawing.Size(227, 26);
             this.totalCaloriesProgressBar.TabIndex = 8;
             this.totalCaloriesProgressBar.Text = "Total Calories Today";
             // 
             // BreakfastLabel
             // 
             this.BreakfastLabel.AutoSize = true;
-            this.BreakfastLabel.Location = new System.Drawing.Point(69, 271);
+            this.BreakfastLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BreakfastLabel.Location = new System.Drawing.Point(48, 408);
             this.BreakfastLabel.Name = "BreakfastLabel";
-            this.BreakfastLabel.Size = new System.Drawing.Size(78, 20);
+            this.BreakfastLabel.Size = new System.Drawing.Size(111, 25);
             this.BreakfastLabel.TabIndex = 11;
             this.BreakfastLabel.Text = "Breakfast";
             // 
             // LunchLabel
             // 
             this.LunchLabel.AutoSize = true;
-            this.LunchLabel.Location = new System.Drawing.Point(252, 271);
+            this.LunchLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LunchLabel.Location = new System.Drawing.Point(291, 408);
             this.LunchLabel.Name = "LunchLabel";
-            this.LunchLabel.Size = new System.Drawing.Size(53, 20);
+            this.LunchLabel.Size = new System.Drawing.Size(75, 25);
             this.LunchLabel.TabIndex = 12;
             this.LunchLabel.Text = "Lunch";
             // 
             // DinnerLabel
             // 
             this.DinnerLabel.AutoSize = true;
-            this.DinnerLabel.Location = new System.Drawing.Point(410, 271);
+            this.DinnerLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DinnerLabel.Location = new System.Drawing.Point(566, 408);
             this.DinnerLabel.Name = "DinnerLabel";
-            this.DinnerLabel.Size = new System.Drawing.Size(56, 20);
+            this.DinnerLabel.Size = new System.Drawing.Size(79, 25);
             this.DinnerLabel.TabIndex = 13;
             this.DinnerLabel.Text = "Dinner";
+            this.DinnerLabel.Click += new System.EventHandler(this.DinnerLabel_Click);
             // 
             // BreakfastAmountLabel
             // 
             this.BreakfastAmountLabel.AutoSize = true;
-            this.BreakfastAmountLabel.Location = new System.Drawing.Point(146, 271);
+            this.BreakfastAmountLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BreakfastAmountLabel.Location = new System.Drawing.Point(175, 408);
             this.BreakfastAmountLabel.Name = "BreakfastAmountLabel";
-            this.BreakfastAmountLabel.Size = new System.Drawing.Size(18, 20);
+            this.BreakfastAmountLabel.Size = new System.Drawing.Size(24, 25);
             this.BreakfastAmountLabel.TabIndex = 14;
             this.BreakfastAmountLabel.Text = "0";
             // 
             // LunchAmountLabel
             // 
             this.LunchAmountLabel.AutoSize = true;
-            this.LunchAmountLabel.Location = new System.Drawing.Point(311, 271);
+            this.LunchAmountLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LunchAmountLabel.Location = new System.Drawing.Point(417, 408);
             this.LunchAmountLabel.Name = "LunchAmountLabel";
-            this.LunchAmountLabel.Size = new System.Drawing.Size(18, 20);
+            this.LunchAmountLabel.Size = new System.Drawing.Size(24, 25);
             this.LunchAmountLabel.TabIndex = 15;
             this.LunchAmountLabel.Text = "0";
             // 
             // DinnerAmountLabel
             // 
             this.DinnerAmountLabel.AutoSize = true;
-            this.DinnerAmountLabel.Location = new System.Drawing.Point(472, 271);
+            this.DinnerAmountLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DinnerAmountLabel.Location = new System.Drawing.Point(692, 408);
             this.DinnerAmountLabel.Name = "DinnerAmountLabel";
-            this.DinnerAmountLabel.Size = new System.Drawing.Size(18, 20);
+            this.DinnerAmountLabel.Size = new System.Drawing.Size(24, 25);
             this.DinnerAmountLabel.TabIndex = 16;
             this.DinnerAmountLabel.Text = "0";
             // 
             // editBreakfastBtn
             // 
-            this.editBreakfastBtn.Location = new System.Drawing.Point(76, 303);
+            this.editBreakfastBtn.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editBreakfastBtn.Location = new System.Drawing.Point(70, 456);
             this.editBreakfastBtn.Name = "editBreakfastBtn";
-            this.editBreakfastBtn.Size = new System.Drawing.Size(88, 40);
+            this.editBreakfastBtn.Size = new System.Drawing.Size(129, 40);
             this.editBreakfastBtn.TabIndex = 17;
             this.editBreakfastBtn.Text = "Edit";
             this.editBreakfastBtn.UseVisualStyleBackColor = true;
@@ -146,9 +158,10 @@
             // 
             // editLunchBtn
             // 
-            this.editLunchBtn.Location = new System.Drawing.Point(241, 303);
+            this.editLunchBtn.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editLunchBtn.Location = new System.Drawing.Point(312, 456);
             this.editLunchBtn.Name = "editLunchBtn";
-            this.editLunchBtn.Size = new System.Drawing.Size(88, 40);
+            this.editLunchBtn.Size = new System.Drawing.Size(129, 40);
             this.editLunchBtn.TabIndex = 18;
             this.editLunchBtn.Text = "Edit";
             this.editLunchBtn.UseVisualStyleBackColor = true;
@@ -156,9 +169,10 @@
             // 
             // editDinnerBtn
             // 
-            this.editDinnerBtn.Location = new System.Drawing.Point(402, 303);
+            this.editDinnerBtn.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.editDinnerBtn.Location = new System.Drawing.Point(587, 456);
             this.editDinnerBtn.Name = "editDinnerBtn";
-            this.editDinnerBtn.Size = new System.Drawing.Size(88, 40);
+            this.editDinnerBtn.Size = new System.Drawing.Size(129, 40);
             this.editDinnerBtn.TabIndex = 19;
             this.editDinnerBtn.Text = "Edit";
             this.editDinnerBtn.UseVisualStyleBackColor = true;
@@ -167,59 +181,63 @@
             // CarbsLabel
             // 
             this.CarbsLabel.AutoSize = true;
-            this.CarbsLabel.Location = new System.Drawing.Point(59, 145);
+            this.CarbsLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CarbsLabel.Location = new System.Drawing.Point(80, 209);
             this.CarbsLabel.Name = "CarbsLabel";
-            this.CarbsLabel.Size = new System.Drawing.Size(51, 20);
+            this.CarbsLabel.Size = new System.Drawing.Size(76, 25);
             this.CarbsLabel.TabIndex = 25;
             this.CarbsLabel.Text = "Carbs";
             // 
             // fatLabel
             // 
             this.fatLabel.AutoSize = true;
-            this.fatLabel.Location = new System.Drawing.Point(255, 145);
+            this.fatLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fatLabel.Location = new System.Drawing.Point(372, 206);
             this.fatLabel.Name = "fatLabel";
-            this.fatLabel.Size = new System.Drawing.Size(33, 20);
+            this.fatLabel.Size = new System.Drawing.Size(46, 25);
             this.fatLabel.TabIndex = 24;
             this.fatLabel.Text = "Fat";
             // 
             // ProteinLabel
             // 
             this.ProteinLabel.AutoSize = true;
-            this.ProteinLabel.Location = new System.Drawing.Point(437, 145);
+            this.ProteinLabel.Font = new System.Drawing.Font("Century Gothic", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProteinLabel.Location = new System.Drawing.Point(611, 211);
             this.ProteinLabel.Name = "ProteinLabel";
-            this.ProteinLabel.Size = new System.Drawing.Size(59, 20);
+            this.ProteinLabel.Size = new System.Drawing.Size(76, 23);
             this.ProteinLabel.TabIndex = 23;
             this.ProteinLabel.Text = "Protein";
             // 
             // fatProgressBar
             // 
-            this.fatProgressBar.Location = new System.Drawing.Point(207, 168);
+            this.fatProgressBar.Location = new System.Drawing.Point(280, 237);
             this.fatProgressBar.Maximum = 5000;
             this.fatProgressBar.Name = "fatProgressBar";
-            this.fatProgressBar.Size = new System.Drawing.Size(138, 23);
+            this.fatProgressBar.Size = new System.Drawing.Size(219, 45);
             this.fatProgressBar.TabIndex = 22;
             // 
             // carbsProgressBar
             // 
-            this.carbsProgressBar.Location = new System.Drawing.Point(12, 168);
+            this.carbsProgressBar.Location = new System.Drawing.Point(12, 237);
             this.carbsProgressBar.Maximum = 5000;
             this.carbsProgressBar.Name = "carbsProgressBar";
-            this.carbsProgressBar.Size = new System.Drawing.Size(138, 23);
+            this.carbsProgressBar.Size = new System.Drawing.Size(219, 45);
             this.carbsProgressBar.TabIndex = 21;
             // 
             // proteinProgressBar
             // 
-            this.proteinProgressBar.Location = new System.Drawing.Point(395, 168);
+            this.proteinProgressBar.Location = new System.Drawing.Point(536, 237);
             this.proteinProgressBar.Maximum = 5000;
             this.proteinProgressBar.Name = "proteinProgressBar";
-            this.proteinProgressBar.Size = new System.Drawing.Size(138, 23);
+            this.proteinProgressBar.Size = new System.Drawing.Size(219, 45);
             this.proteinProgressBar.TabIndex = 20;
             // 
             // goalsBtn
             // 
-            this.goalsBtn.Location = new System.Drawing.Point(410, 12);
+            this.goalsBtn.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.goalsBtn.Location = new System.Drawing.Point(597, 22);
             this.goalsBtn.Name = "goalsBtn";
-            this.goalsBtn.Size = new System.Drawing.Size(123, 40);
+            this.goalsBtn.Size = new System.Drawing.Size(158, 46);
             this.goalsBtn.TabIndex = 26;
             this.goalsBtn.Text = "Set Goals";
             this.goalsBtn.UseVisualStyleBackColor = true;
@@ -229,9 +247,10 @@
             // 
             this.calorieProgressBarValueLabel.AutoSize = true;
             this.calorieProgressBarValueLabel.BackColor = System.Drawing.Color.Transparent;
-            this.calorieProgressBarValueLabel.Location = new System.Drawing.Point(237, 98);
+            this.calorieProgressBarValueLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calorieProgressBarValueLabel.Location = new System.Drawing.Point(323, 147);
             this.calorieProgressBarValueLabel.Name = "calorieProgressBarValueLabel";
-            this.calorieProgressBarValueLabel.Size = new System.Drawing.Size(63, 20);
+            this.calorieProgressBarValueLabel.Size = new System.Drawing.Size(106, 25);
             this.calorieProgressBarValueLabel.TabIndex = 27;
             this.calorieProgressBarValueLabel.Text = "xxx / yyy";
             // 
@@ -239,9 +258,10 @@
             // 
             this.proteinProgressBarValueLabel.AutoSize = true;
             this.proteinProgressBarValueLabel.BackColor = System.Drawing.Color.Transparent;
-            this.proteinProgressBarValueLabel.Location = new System.Drawing.Point(433, 194);
+            this.proteinProgressBarValueLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.proteinProgressBarValueLabel.Location = new System.Drawing.Point(592, 247);
             this.proteinProgressBarValueLabel.Name = "proteinProgressBarValueLabel";
-            this.proteinProgressBarValueLabel.Size = new System.Drawing.Size(63, 20);
+            this.proteinProgressBarValueLabel.Size = new System.Drawing.Size(106, 25);
             this.proteinProgressBarValueLabel.TabIndex = 28;
             this.proteinProgressBarValueLabel.Text = "xxx / yyy";
             // 
@@ -249,9 +269,10 @@
             // 
             this.fatProgressBarValueLabel.AutoSize = true;
             this.fatProgressBarValueLabel.BackColor = System.Drawing.Color.Transparent;
-            this.fatProgressBarValueLabel.Location = new System.Drawing.Point(237, 194);
+            this.fatProgressBarValueLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fatProgressBarValueLabel.Location = new System.Drawing.Point(344, 247);
             this.fatProgressBarValueLabel.Name = "fatProgressBarValueLabel";
-            this.fatProgressBarValueLabel.Size = new System.Drawing.Size(63, 20);
+            this.fatProgressBarValueLabel.Size = new System.Drawing.Size(106, 25);
             this.fatProgressBarValueLabel.TabIndex = 29;
             this.fatProgressBarValueLabel.Text = "xxx / yyy";
             // 
@@ -259,17 +280,29 @@
             // 
             this.carbProgressBarValueLabel.AutoSize = true;
             this.carbProgressBarValueLabel.BackColor = System.Drawing.Color.Transparent;
-            this.carbProgressBarValueLabel.Location = new System.Drawing.Point(47, 194);
+            this.carbProgressBarValueLabel.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.carbProgressBarValueLabel.Location = new System.Drawing.Point(62, 247);
             this.carbProgressBarValueLabel.Name = "carbProgressBarValueLabel";
-            this.carbProgressBarValueLabel.Size = new System.Drawing.Size(63, 20);
+            this.carbProgressBarValueLabel.Size = new System.Drawing.Size(106, 25);
             this.carbProgressBarValueLabel.TabIndex = 30;
             this.carbProgressBarValueLabel.Text = "xxx / yyy";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(323, 345);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 26);
+            this.label1.TabIndex = 31;
+            this.label1.Text = "Add Food";
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(549, 368);
+            this.ClientSize = new System.Drawing.Size(767, 527);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.carbProgressBarValueLabel);
             this.Controls.Add(this.fatProgressBarValueLabel);
             this.Controls.Add(this.proteinProgressBarValueLabel);
@@ -294,6 +327,7 @@
             this.Controls.Add(this.caloriesProgressBar);
             this.Controls.Add(this.dateTimePicker);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainForm";
             this.Text = "Food Tracker";
             this.ResumeLayout(false);
@@ -326,6 +360,7 @@
         private System.Windows.Forms.Label proteinProgressBarValueLabel;
         private System.Windows.Forms.Label fatProgressBarValueLabel;
         private System.Windows.Forms.Label carbProgressBarValueLabel;
+        private System.Windows.Forms.Label label1;
     }
 }
 

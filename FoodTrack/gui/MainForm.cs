@@ -338,7 +338,9 @@ namespace FoodTrack
             ChangeFormContentByDate(x.Value);
         }//end method
 
-        
+        private void DinnerLabel_Click(object sender, EventArgs e)
+        {
 
+        }
     }//end class
 }
