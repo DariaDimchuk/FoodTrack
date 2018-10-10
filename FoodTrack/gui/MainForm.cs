@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using FoodTrack.data;
 using FoodTrack.gui;
-
 namespace FoodTrack
 {
     /// <summary>
@@ -186,9 +185,9 @@ namespace FoodTrack
         /// </summary>
         private void UpdateMealLabels()
         {
-            this.BreakfastAmountLabel.Text = this.tracker.GetTotalBreakfastCalories().ToString();
-            this.LunchAmountLabel.Text = this.tracker.GetTotalLunchCalories().ToString();
-            this.DinnerAmountLabel.Text = this.tracker.GetTotalDinnerCalories().ToString();
+            this.BreakfastAmountLabel.Text = this.tracker.GetTotalBreakfastCalories().ToString() + " cal";
+            this.LunchAmountLabel.Text = this.tracker.GetTotalLunchCalories().ToString() + " cal";
+            this.DinnerAmountLabel.Text = this.tracker.GetTotalDinnerCalories().ToString() + " cal";
         }//end method
 
 
@@ -337,10 +336,7 @@ namespace FoodTrack
             DateTimePicker x = (DateTimePicker)sender;
             ChangeFormContentByDate(x.Value);
         }//end method
+        
 
-        private void DinnerLabel_Click(object sender, EventArgs e)
-        {
-
-        }
     }//end class
 }

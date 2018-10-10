@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using FoodTrack.data;
+using FoodTrack.utility;
 
 namespace FoodTrack.gui
 {
@@ -49,20 +50,11 @@ namespace FoodTrack.gui
         /// <param name="mealType"></param>
         private void SelectFoodListToDisplayByMealType(Meal mealType)
         {
-            if(mealType == Meal.BREAKFAST)
-            {
-                foodListBinding = tracker.GetBreakfast();
-            }
+            if(mealType == Meal.BREAKFAST) foodListBinding = tracker.GetBreakfast();
 
-            if(mealType == Meal.LUNCH)
-            {
-                foodListBinding = tracker.GetLunch();
-            }
+            if (mealType == Meal.LUNCH) foodListBinding = tracker.GetLunch();
 
-            if(mealType == Meal.DINNER)
-            {
-                foodListBinding = tracker.GetDinner();
-            }      
+            if (mealType == Meal.DINNER) foodListBinding = tracker.GetDinner();
         }//end method
 
 
@@ -159,7 +151,6 @@ namespace FoodTrack.gui
         /// <param name="food"></param>
         private void SetEditTextboxesToFoodItemValues(FoodItem food)
         {
-
             if (food != null)
             {
                 nameTxt.Text = food.GetName();
@@ -182,9 +173,9 @@ namespace FoodTrack.gui
             ClearErrorLabels();
             bool validationPassed = true;
 
-            FoodItem current = foodListBinding.ElementAt(foodsListBox.SelectedIndex);
+            FoodItem currentFoodItem = foodListBinding.ElementAt(foodsListBox.SelectedIndex);
 
-            if (current.SetName(nameTxt.Text) == false)
+            if (currentFoodItem.SetName(nameTxt.Text) == false)
             {
                 validationPassed = false;
                 nameErrorLabel.Text = "Name can't be empty or have numbers in it.";
@@ -192,43 +183,43 @@ namespace FoodTrack.gui
 
             if(Int32.TryParse(caloriesTxt.Text, out int cal))
             {
-                if (!current.SetCalories(cal))
+                if (!currentFoodItem.SetCalories(cal))
                 {
                     validationPassed = false;
-                    CaloriesErrorLabel.Text = "Calories must be a number 0 or above";
+                    CaloriesErrorLabel.Text = "Calories must be 0 or above";
                 }
             }
 
             if (Int32.TryParse(carbsTxt.Text, out int carb))
             {
-                if (!current.SetCarbs(carb))
+                if (!currentFoodItem.SetCarbs(carb))
                 {
                     validationPassed = false;
-                    CarbsErrorLabel.Text = "Carbs must be a number 0 or above";
+                    CarbsErrorLabel.Text = "Carbs must be 0 or above";
                 }
             }
 
             if (Int32.TryParse(fatTxt.Text, out int fat))
             {
-                if (!current.SetFat(fat))
+                if (!currentFoodItem.SetFat(fat))
                 {
                     validationPassed = false;
-                    FatErrorLabel.Text = "Fat must be a number 0 or above";
+                    FatErrorLabel.Text = "Fat must be 0 or above";
                 }
             }
 
             if (Int32.TryParse(proteinTxt.Text, out int prot))
             {
-                if(!current.SetProtein(prot)){
+                if(!currentFoodItem.SetProtein(prot)){
                     validationPassed = false;
-                    ProteinErrorLabel.Text = "Protein must be a number 0 or above";
+                    ProteinErrorLabel.Text = "Protein must be 0 or above";
                 }
             }
 
 
             if (validationPassed)
             {
-                foodListBinding[foodsListBox.SelectedIndex] = current;
+                foodListBinding[foodsListBox.SelectedIndex] = currentFoodItem;
                 generalErrorLabel.ForeColor = Color.Green;
                 generalErrorLabel.Text = "Changes saved!";
             }
@@ -246,10 +237,18 @@ namespace FoodTrack.gui
         /// <param name="e"></param>
         private void DeleteFoodBtn_Click(object sender, EventArgs e)
         {
-            if(foodsListBox.SelectedIndex >= 0){
-                foodListBinding.RemoveAt(foodsListBox.SelectedIndex);
-                SetUpEditSection();
+            String foodName = foodListBinding.ElementAt(foodsListBox.SelectedIndex).GetName();
+
+            if(new ConfirmForm("Are you sure you want to delete " +
+                foodName + "?").ShowDialog() == DialogResult.OK)
+            {
+                if (foodsListBox.SelectedIndex >= 0)
+                {
+                    foodListBinding.RemoveAt(foodsListBox.SelectedIndex);
+                    SetUpEditSection();
+                }
             }
+            
         }//end method
 
 
@@ -268,22 +267,22 @@ namespace FoodTrack.gui
             generalErrorLabel.Text = "";
         }//end method
 
+
+        /// <summary>
+        /// Updates some labels when this form loads
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MealForm_Load(object sender, EventArgs e)
         {
-            if (mealType == Meal.BREAKFAST)
-            {
-                FormsFunctionLabel.Text += " Breakfast";
-            }
+            if (mealType == Meal.BREAKFAST) FormsFunctionLabel.Text += " Breakfast";
 
-            if (mealType == Meal.LUNCH)
-            {
-                FormsFunctionLabel.Text += " Lunch";
-            }
+            if (mealType == Meal.LUNCH) FormsFunctionLabel.Text += " Lunch";
 
-            if (mealType == Meal.DINNER)
-            {
-                FormsFunctionLabel.Text += " Dinner";
-            }
-        }
+            if (mealType == Meal.DINNER) FormsFunctionLabel.Text += " Dinner";
+            
+
+        }//end method
+
     }//end class
 }
